@@ -178,6 +178,10 @@ Ce dépôt GitHub présente l'architecture, les choix techniques et les résulta
 
 Une partie du code source est disponible, notamment l'application STM32 et l'outil de génération des informations du firmware (taille et CRC32).
 
+Outil de calcul de la taille et du CRC32 :
+L'outil développé en langage C permet de calculer la taille et le CRC32 du fichier Application.bin et de générer automatiquement le fichier fw_details.txt.
+📁 Consulter le code source et les instructions de compilation et d'exécution
+
 Le code source du bootloader, responsable de la gestion et de l'installation des mises à jour OTA, n'est pas publié dans ce dépôt public.
 
 ## 12. Auteurs et contact
