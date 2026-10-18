@@ -77,7 +77,7 @@ Chaque version est identifiable par un message affiché sur le terminal série e
 
 ### Identification des trois versions de démonstration
 
-![LED rouge, verte et bleue](Panneau%20LED%20tricolore%20minimaliste.png)
+![LED rouge, verte et bleue](image/Panneau%20LED%20tricolore%20minimaliste.png)
 
 L'application réalise les opérations suivantes :
 
@@ -93,7 +93,7 @@ L'application assure donc le fonctionnement normal du système et la détection 
 
 ### Diagramme de fonctionnement de l'application
 
-![Diagramme de fonctionnement de l'application OTA](diagramme_application_ota.png)
+![Diagramme de fonctionnement de l'application OTA](image/diagramme_application_ota.png)
 
 
 ## 6. Fonctionnement du bootloader (`main(1).c`)
@@ -119,7 +119,7 @@ Le bootloader comporte également une gestion des erreurs, des tentatives suppl�
 
 ### Diagramme de fonctionnement du bootloader
 
-![Diagramme de fonctionnement du bootloader](diagramme_bootloader.png)
+![Diagramme de fonctionnement du bootloader](image/diagramme_bootloader.png)
 
 ## 7. Organisation de la mémoire Flash
 
