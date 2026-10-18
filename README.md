@@ -120,26 +120,10 @@ Son fonctionnement comprend les étapes suivantes :
 
 Le bootloader comporte également une gestion des erreurs, des tentatives supplémentaires en cas d'échec et une fonction de récupération `rollback()`.
 
+
 ### Diagramme de fonctionnement du bootloader
 
-```mermaid
-flowchart TD
-    A([Démarrage du bootloader]) --> B[Initialisation des périphériques et du GSM/4G]
-    B --> C[Lecture des informations du firmware]
-    C --> D{Mise à jour nécessaire ?}
-    D -- Non --> J{Application valide ?}
-    D -- Oui --> E[Téléchargement du firmware]
-    E --> F[Écriture dans la mémoire Flash]
-    F --> G{CRC32 valide ?}
-    G -- Oui --> H[Mise à jour de la configuration]
-    H --> J
-    G -- Non --> I[Gestion de l'erreur / récupération]
-    I --> J
-    J -- Oui --> K([Lancement de l'application])
-    J -- Non --> L([Erreur / récupération])
-```
-
-*Diagramme fonctionnel simplifié du bootloader, sans étape de notification de l'utilisateur.*
+![Diagramme de fonctionnement du bootloader](diagramme_bootloader.png)
 
 ## 7. Organisation de la mémoire Flash
 
