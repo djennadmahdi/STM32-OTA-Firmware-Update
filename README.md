@@ -75,13 +75,9 @@ Dans le cadre de ce projet, plusieurs versions de démonstration ont été utili
 
 Chaque version est identifiable par un message affiché sur le terminal série et par l'allumage d'une LED de couleur spécifique.
 
-| Version | Indication visuelle |
-|---|---|
-| **Application 1** | 🔴 LED rouge |
-| **Application 2** | 🟢 LED verte |
-| **Application 3** | 🔵 LED bleue |
+### Identification des trois versions de démonstration
 
-*Identification des trois versions de démonstration du firmware.*
+![LED rouge, verte et bleue](Panneau%20LED%20tricolore%20minimaliste.png)
 
 L'application réalise les opérations suivantes :
 
