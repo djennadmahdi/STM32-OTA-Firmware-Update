@@ -178,16 +178,21 @@ Ce projet a permis de mettre en œuvre des compétences en développement embarq
 
 ## 11. Disponibilité du code source
 
-Ce dépôt GitHub est destiné à présenter l'architecture, les choix techniques et les résultats du projet.
+Ce dépôt GitHub présente l'architecture, les choix techniques et les résultats du projet.
 
-Le code source complet de l'application et du bootloader n'est pas publié dans ce dépôt public.
+Une partie du code source est disponible, notamment l'application STM32 et l'outil de génération des informations du firmware (taille et CRC32).
+
+Le code source du bootloader, responsable de la gestion et de l'installation des mises à jour OTA, n'est pas publié dans ce dépôt public.
 
 ## 12. Auteurs et contact
 
 **Mahdi Djennad**  
-Master Réseaux, Mobilité et Systèmes Embarqués  
+Projet de fin d'études -- Master Réseaux, Mobilité et Systèmes Embarqués  
 Université Mouloud Mammeri de Tizi-Ouzou — 2024
 
 **Contact : Mahdi Djennad**
 
 GitHub : [github.com/djennadmahdi](https://github.com/djennadmahdi)
+LinkedIn : [Profil LinkedIn](https://www.linkedin.com/in/mahdi-djennad)
+
+Actuellement étudiant en Master 2 MIASHS — Informatique et Cognition à l'Université Grenoble Alpes, à la recherche d'un stage de fin d'études de six mois à partir de février 2027.
