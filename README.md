@@ -94,6 +94,12 @@ L'application réalise les opérations suivantes :
 
 L'application assure donc le fonctionnement normal du système et la détection des mises à jour. Lorsqu'une nouvelle version est disponible, elle redémarre le système.
 
+
+### Diagramme de fonctionnement de l'application
+
+![Diagramme de fonctionnement de l'application OTA](diagramme_application_ota.png)
+
+
 ## 6. Fonctionnement du bootloader (`main(1).c`)
 
 Le bootloader est responsable de la gestion du processus de mise à jour et du lancement de l'application.
