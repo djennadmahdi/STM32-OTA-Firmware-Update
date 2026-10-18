@@ -193,6 +193,7 @@ Université Mouloud Mammeri de Tizi-Ouzou — 2024
 **Contact : Mahdi Djennad**
 
 GitHub : [github.com/djennadmahdi](https://github.com/djennadmahdi)
+
 LinkedIn : [Profil LinkedIn](https://www.linkedin.com/in/mahdi-djennad)
 
 Actuellement étudiant en Master 2 MIASHS — Informatique et Cognition à l'Université Grenoble Alpes, à la recherche d'un stage de fin d'études de six mois à partir de février 2027.
