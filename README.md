@@ -174,17 +174,31 @@ Ce projet a permis de mettre en œuvre des compétences en développement embarq
 
 ## 11. Disponibilité du code source
 
-Ce dépôt GitHub présente l'architecture, les choix techniques et les résultats du projet.
+Ce dépôt GitHub présente l'architecture, le fonctionnement et les principaux résultats du système de mise à jour OTA développé pour le microcontrôleur STM32F446RE.
 
-Une partie du code source est disponible, notamment l'application STM32 et l'outil de génération des informations du firmware (taille et CRC32).
+Une partie du code source est mise à disposition afin d'illustrer les différentes étapes du processus de mise à jour.
 
-Outil de calcul de la taille et du CRC32 :
+### Application embarquée STM32
 
-L'outil développé en langage C permet de calculer la taille et le CRC32 du fichier Application.bin et de générer automatiquement le fichier fw_details.txt.
+L'application développée en C embarqué assure la vérification périodique des mises à jour OTA, toutes les 30 secondes, à l'aide du module GSM/4G SIM7600E.
 
-📁 Consulter le code source et les instructions de compilation et d'exécution
+Elle récupère les informations du firmware distant via HTTP, compare sa taille et son CRC32 avec ceux du firmware actuel et déclenche un redémarrage du microcontrôleur lorsqu'une mise à jour est détectée.
 
-Le code source du bootloader, responsable de la gestion et de l'installation des mises à jour OTA, n'est pas publié dans ce dépôt public.
+📁 [Consulter le code source de l'application STM32](application/)
+
+### Outil de calcul de la taille et du CRC32
+
+Un utilitaire développé en C permet d'analyser le fichier binaire `Application.bin`, de calculer sa taille et son CRC32, puis de générer automatiquement le fichier `fw_details.txt`.
+
+Ce fichier contient les métadonnées nécessaires à la détection et à la vérification des mises à jour OTA.
+
+📁 [Consulter le code source et les instructions d'utilisation](firmware-tools/)
+
+### Code du bootloader
+
+Le bootloader assure le téléchargement, la vérification et l'installation du nouveau firmware dans la mémoire Flash du STM32.
+
+Son code source n'est pas publié dans ce dépôt public. Son architecture et son fonctionnement sont toutefois présentés dans la documentation du projet.
 
 ## 12. Auteurs et contact
 
