@@ -156,17 +156,53 @@ Une fois préparés, les fichiers sont placés sur GitHub, où ils peuvent être
 
 ## 9. Tests et validation du système
 
-Pour valider le fonctionnement du système OTA, plusieurs versions de l'application ont été utilisées.
+Le système de mise à jour OTA a été testé sur une carte **STM32 Nucleo-F446RE**, associée au module de communication **SIM7600E**.
 
-La première version affiche `Application 1` et allume la LED rouge.
+Les essais ont permis de vérifier le démarrage du firmware initial, le téléchargement d'une nouvelle version et le comportement du système en cas d'interruption du processus de mise à jour.
 
-Après l'installation d'une nouvelle version, le terminal affiche `Application 2` et la LED verte s'allume.
+### Test 1 — Exécution de l'application initiale
 
-Une autre mise à jour permet de passer à `Application 3`, identifiable par la LED bleue.
+Le premier test consiste à vérifier le bon fonctionnement de l'application 1 après son installation sur le microcontrôleur.
 
-Cette méthode permet de vérifier que le système est capable de récupérer un nouveau firmware, de l'installer et d'exécuter la nouvelle application.
+Au démarrage, une **LED rouge** s'allume pour identifier la version initiale du firmware.
 
-Le projet comporte également une vérification CRC32 et une gestion des erreurs dans le bootloader.
+L'application effectue également une vérification périodique de la disponibilité des mises à jour, toutes les **30 secondes**. Les informations d'exécution peuvent être observées à l'aide du terminal série Tera Term.
+
+![Exécution de l'application initiale sur STM32](image/application_initiale.png)
+
+*Figure 1 — Exécution de l'application initiale et affichage des messages sur Tera Term.*
+
+### Test 2 — Mise à jour OTA vers l'application 2
+
+Le deuxième test consiste à télécharger et installer une nouvelle version du firmware à distance, à travers le module GSM/4G.
+
+Le système récupère le fichier binaire de la nouvelle version et effectue une vérification de son intégrité à l'aide du **CRC32**.
+
+Après l'installation et le redémarrage, l'application 2 s'exécute. La **LED passe du rouge au vert**, ce qui permet de visualiser le changement de version directement sur la carte STM32.
+
+Ce test démontre le fonctionnement du mécanisme de mise à jour OTA sur le prototype matériel.
+
+![Application 2 avec LED verte allumée](image/application_2_led_verte.png)
+
+Figure 2 — Mise à jour OTA vers l’application 2 : journal d’exécution du processus et validation matérielle par l’allumage de la LED verte.
+
+### Test 3 — Gestion des interruptions et des erreurs
+
+Un troisième scénario porte sur les interruptions pouvant survenir pendant une mise à jour, notamment une coupure de connexion, une interruption d'alimentation ou un firmware corrompu.
+
+L'architecture du système repose sur deux emplacements de stockage du firmware (*slots*) afin de conserver une version précédente et de permettre un retour à celle-ci en cas d'échec.
+
+Ce mécanisme vise à préserver le fonctionnement du dispositif lorsqu'une mise à jour ne peut pas être terminée correctement.
+
+### Résultats observés
+
+Les essais présentés dans le mémoire mettent en évidence :
+
+- Le démarrage de l'application initiale, signalé par une LED rouge.
+- La vérification périodique des mises à jour toutes les 30 secondes.
+- Le téléchargement et l'installation d'une nouvelle version du firmware.
+- Le passage à l'application 2, confirmé par l'allumage d'une LED verte.
+- La prise en compte des scénarios d'interruption dans le mécanisme de mise à jour.
 
 ## 10. Compétences techniques mobilisées
 
