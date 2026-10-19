@@ -217,6 +217,12 @@ Le journal d'exécution permet de suivre le téléchargement,
 l'écriture du firmware dans la mémoire Flash et le démarrage
 de l'application après la mise à jour.
 
+### Présentation synthétique du projet
+
+Une présentation illustrée résume l'objectif du projet, l'architecture matérielle et logicielle, le fonctionnement du système OTA et les résultats expérimentaux.
+
+📄 [Consulter la présentation du projet OTA (PDF)](OTA_Mahdi_Djennad.pdf)
+
 ## 10. Compétences techniques mobilisées
 
 Ce projet a permis de mettre en œuvre des compétences en développement embarqué, notamment la programmation en C sur STM32, la conception d'un bootloader, la gestion de la mémoire Flash, la communication UART, l'utilisation des commandes AT et du module SIM7600E, le téléchargement HTTP de fichiers binaires, le contrôle CRC32 et la validation sur matériel réel.
