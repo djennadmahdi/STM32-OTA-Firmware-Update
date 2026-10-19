@@ -208,6 +208,15 @@ Les essais présentés dans le mémoire mettent en évidence :
 - Le passage à l'application 2, confirmé par l'allumage d'une LED verte.
 - La prise en compte des scénarios d'interruption dans le mécanisme de mise à jour.
 
+### Résultat chiffré
+
+Lors des essais de mise à jour OTA, un firmware d'une taille
+de **17 480 octets (environ 17,1 Kio)** a été utilisé.
+
+Le journal d'exécution permet de suivre le téléchargement,
+l'écriture du firmware dans la mémoire Flash et le démarrage
+de l'application après la mise à jour.
+
 ## 10. Compétences techniques mobilisées
 
 Ce projet a permis de mettre en œuvre des compétences en développement embarqué, notamment la programmation en C sur STM32, la conception d'un bootloader, la gestion de la mémoire Flash, la communication UART, l'utilisation des commandes AT et du module SIM7600E, le téléchargement HTTP de fichiers binaires, le contrôle CRC32 et la validation sur matériel réel.
