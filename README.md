@@ -186,13 +186,17 @@ Ce test démontre le fonctionnement du mécanisme de mise à jour OTA sur le pro
 
 Figure 2 — Mise à jour OTA vers l’application 2 : journal d’exécution du processus et validation matérielle par l’allumage de la LED verte.
 
-### Test 3 — Gestion des interruptions et des erreurs
+### Test 3 — Gestion des interruptions et retour à la version précédente
 
 Un troisième scénario porte sur les interruptions pouvant survenir pendant une mise à jour, notamment une coupure de connexion, une interruption d'alimentation ou un firmware corrompu.
 
 L'architecture du système repose sur deux emplacements de stockage du firmware (*slots*) afin de conserver une version précédente et de permettre un retour à celle-ci en cas d'échec.
 
 Ce mécanisme vise à préserver le fonctionnement du dispositif lorsqu'une mise à jour ne peut pas être terminée correctement.
+
+![Gestion des interruptions et récupération du firmware](image/mise_a_jour_ota.png)
+
+*Figure 3 — Interruption du transfert OTA et retour à l'application 2 précédemment installée.*
 
 ### Résultats observés
 
